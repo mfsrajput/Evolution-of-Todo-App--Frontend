@@ -1,10 +1,16 @@
 // API client utilities for the frontend
 
 // Base API URL - can be configured via environment variables
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+// Using NEXT_PUBLIC_API_URL environment variable for backend API
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 // Generic API request function with authentication
 const apiRequest = async (endpoint, options = {}) => {
+  // Validate that API_BASE_URL is defined at runtime
+  if (!API_BASE_URL) {
+    throw new Error('NEXT_PUBLIC_API_URL environment variable must be set');
+  }
+
   const url = `${API_BASE_URL}${endpoint}`;
 
   // Get token from auth utility
