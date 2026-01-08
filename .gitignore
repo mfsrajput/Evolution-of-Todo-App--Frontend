@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Production builds
+.next/
+out/
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Coverage
+coverage/
+.coverage
+.coverage.*
+
+# Next.js
+.next/
+out/
+build/
+
+# Testing
+junit.xml
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
